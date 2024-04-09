@@ -1,0 +1,47 @@
+import java.util.*;
+public class raja {
+    public static void main (String[] args) {
+        Scanner obj = new Scanner(System.in);
+        
+        while (true) {
+            System.out.println("   ATM Mechine   ");
+            System.out.println("Choose 1 in language");
+            System.out.println("Choose 2 in withdrawal");
+            System.out.println("Choose 3 in Deposit");
+            System.out.println("Choose 4 in check balance");
+            System.out.print("Enter your account balance:");
+        int balance=obj.nextInt();
+            System.out.print("Enter your choice:");
+            int choice = obj.nextInt();
+            switch (choice) {
+                case 1:
+                    System.out.println("Select tamil language only  ");
+                    break;
+                    
+               
+                case 2:
+                    System.out.print("Enter your withdrawel money:");
+                    int withdrawel = obj.nextInt();
+                    if (balance > withdrawel) {
+                        balance = balance - withdrawel;
+                        System.out.println("Please collect your money");
+                    } else {
+                        System.out.println("Again check this  balance");
+                        break;
+                    }
+                case 3:
+                    System.out.print("Enter your money deposited:");
+                    int deposited = obj.nextInt();
+                    balance=balance+deposited;
+                    System.out.println("Money has been deposited successfully");
+                    break;
+                case 4:
+                    System.out.println("Balance:"+balance);
+                    break;
+                default:
+                    System.out.println("Invalid card number");
+                    break;
+            }
+        }
+    }
+}
